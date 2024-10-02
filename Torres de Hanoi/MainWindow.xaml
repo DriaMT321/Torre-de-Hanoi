@@ -1,0 +1,36 @@
+﻿<Window x:Class="Torres_de_Hanoi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Torres_de_Hanoi"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Torre Inicial" HorizontalAlignment="Center"/>
+            <ListBox x:Name="lbInitial" Height="200" AllowDrop="True" Background="LightGray"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Torre Auxiliar" HorizontalAlignment="Center"/>
+            <ListBox x:Name="lbAuxiliary" Height="200" AllowDrop="True" Background="LightGray"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Torre Final" HorizontalAlignment="Center"/>
+            <ListBox x:Name="lbFinal" Height="200" AllowDrop="True" Background="LightGray"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBox x:Name="txtDiscs" Width="50" Margin="5" Text="3" Height="42"/>
+            <Button x:Name="btnSolve" Content="Resolver" Click="btnSolve_Click" Margin="5" Height="39"/>
+        </StackPanel>
+    </Grid>
+</Window>
