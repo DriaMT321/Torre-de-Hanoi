@@ -1,1 +1,1 @@
-# Torre-de-Hanoi. Tambien esta va por ti, indio filipino
+# Torre-de-Hanoi desarollada en C# XAML 
